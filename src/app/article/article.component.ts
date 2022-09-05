@@ -3,15 +3,14 @@ import { Component, HostBinding, Input, OnInit } from '@angular/core';
 import { Article } from './article.model';
 
 @Component({
-  selector: 'app-article',
+  selector: 'app-article[article]', // [article] makes the article attribute required
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('class') class = 'row';
   @Input() article: Article = {} as Article;
-  constructor() {
-   }
+  constructor() {}
 
   voteUp() {
     this.article.upvote();

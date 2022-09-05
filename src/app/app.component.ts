@@ -30,8 +30,9 @@ export class AppComponent {
       this.articles = this.articleService.getArticles();
     }
 
-    sortedArticles(): Article[] {
-      return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
+    sortedArticles(): Article[] | null {
+      // return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
+      return null;
     }
 
 }
